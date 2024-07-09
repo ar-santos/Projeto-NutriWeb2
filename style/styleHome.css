@@ -231,12 +231,10 @@ body {
 
     .img-text {
         position: absolute;
-        color: #fff;
-        font-size: 5vw;
         text-align: center;
+        color: #fff;
         margin-top: 50px;
-        line-height: 1.2;
-        padding: 0 5vw;
+        font-size: 30px;
     }
     
     .green-text {
