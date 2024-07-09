@@ -15,23 +15,18 @@ body {
     background-color: rgba(0, 0, 0, 0.599);
     border-bottom: 1px solid #ddd;
     position: absolute;
-    width: 97.4%;
+    width: 100%;
+    box-sizing: border-box;
 }
 
-.left-section {
+.left-section, .center-section, .right-section {
     display: flex;
     align-items: center;
 }
 
 .center-section {
     flex-grow: 1;
-    display: flex;
     justify-content: center;
-}
-
-.right-section {
-    display: flex;
-    align-items: center;
 }
 
 .header .logo {
@@ -40,8 +35,8 @@ body {
 }
 
 .btn-ranking {
-    margin-right: 40px;
-    margin-left: 40px;
+    margin: 0 40px;
+    align-items: center;
 }
 
 .btn-ranking .icon-rank {
@@ -61,21 +56,13 @@ body {
     padding: 0;
 }
 
-.btn-ranking .ranking-button:hover,
-.profissionais-button:hover,
-.premium-button:hover,
-.entrar-button:hover {
-    text-decoration: none;
-}
-
 .input-premium {
     display: flex;
     align-items: center;
     width: 100%;
     max-width: 600px;
     border-radius: 15px;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin: 0 20px;
     overflow: hidden;
     background-color: rgba(255, 255, 255, 0.268); 
 }
@@ -116,11 +103,12 @@ body {
 .profissionais-button {
     margin-top: 25px;
 }
+
 .img-header {
     position: relative;
     width: 100%;
-    height: 70vh; 
-    overflow: hidden; 
+    height: 70vh;
+    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -140,24 +128,27 @@ body {
 }
 
 .saudavel-text {
-    font-family: 'Lucida Handwriting', cursive; 
-    font-weight: bold; 
+    font-family: 'Lucida Handwriting', cursive;
+    font-weight: bold;
 }
 
 .green-text {
     color: green;
-    font-family: 'Lucida Handwriting', cursive; 
+    font-family: 'Lucida Handwriting', cursive;
+}
+
+.home-mobile {
+    display: none;
 }
 
 @media (max-width: 768px) {
     .header {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
     }
 
-    .left-section,
-    .right-section {
-        margin-top: 10px;
+    .left-section, .right-section {
+        margin: 10px 0;
         justify-content: center;
         align-items: center;
     }
@@ -166,4 +157,90 @@ body {
         margin-top: 10px;
         justify-content: center;
     }
+    .home-mobile {
+        display: none;
+    }
+}
+
+@media (max-width: 940px) {
+
+    .header{
+        display: none;
+    }
+    .img-header{
+        display: none;
+    }
+    .home-mobile {
+        display: flex;
+    }
+
+    .home-mobile {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .menu {
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 20px;
+        background-color: rgba(0, 0, 0, 0.599);
+        border-bottom: 1px solid #ddd;
+        width: 100%;
+        box-sizing: border-box;
+        position: fixed; 
+        top: 0;
+    }
+    
+    .left-section, .right-section {
+        display: flex;
+        align-items: center;
+    }
+    
+    .menu .logo {
+        height: 40px;
+    }
+    
+    .right-section .search-icon {
+        font-size: 24px;
+        color: #fff;
+        cursor: pointer;
+    }
+    
+    .img-header-mobile {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+    
+    .img-header-mobile img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .material-icons.md-24 {
+        font-size: 40px; 
+        color: green; 
+    }
+
+    .img-text {
+        position: absolute;
+        color: #fff;
+        font-size: 5vw;
+        text-align: center;
+        margin-top: 50px;
+        line-height: 1.2;
+        padding: 0 5vw;
+    }
+    
+    .green-text {
+        color: green;
+    }
+
 }
