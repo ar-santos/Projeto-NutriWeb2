@@ -236,10 +236,7 @@ body {
     }
 
     .right-card h2 {
-        background-color: rgba(0, 0, 0, 0.53);
-        color: rgb(6, 201, 6);
-        padding: 10px;
-        border-radius: 30px;
+        color: rgb(164, 237, 164);        
     }
 
     .btn{
