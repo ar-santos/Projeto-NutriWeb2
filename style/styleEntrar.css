@@ -110,87 +110,99 @@ body {
     margin-top: 25px;
 }
 
-.ranking-section {
-    padding: 20px;
-    text-align: center;
-    margin-top: 90px;
-}
-
-.header-content {
+.main-content {
     display: flex;
-    align-items: left;
-    justify-content: left;
-    margin-bottom: 20px;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 20px;
 }
 
-.arrow-icon {
-    font-size: 36px;
-    color: green;
+.welcome-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1000px;
 }
 
-.arrow-icon.md-24 {
-    font-size: 36px;
-    cursor: pointer;
-}
-
-.header-text {
-    font-size: 36px;
-    margin-left: 10px;
-    color: #333;
-}
-
-.ranking-section h1 {
-    font-size: 2em;
-    margin-bottom: 20px;
-    color: rgb(1, 103, 1);
+.left-image {
+    flex: 1;
+    position: relative;
+    max-width: 100vw; 
 }
 
 .responsive-img {
-    max-width: 100%;
+    width: 156%; 
     height: auto;
-    margin-bottom: 20px;
+    position: relative;
+    transform: translateX(-36%);
 }
 
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 20px;
-}
-
-table, th, td {
-    border: 1px solid #ddd;
-}
-
-tr {
-    background-color: green;
-    color: white; 
-}
-
-th, td {
-    padding: 15px;
-    text-align: left;
-}
-
-tbody tr {
-    background-color: #fff;
-    color: black;
-}
-
-.home-mobile {
+.header-content{
     display: none;
 }
 
-@media (max-width: 950px) {
+.right-card {
+    flex: 1;
+    padding: 40px 20px;
+    background-color: #f4f4f4;
+    border: 2px solid green;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+    font-size: 20px;
+    min-height: 400px; 
+}
+
+.right-card h2 {
+    margin-bottom: 90px; 
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; 
+}
+
+.btn {
+    background-color: green;
+    color: white;
+    border: none;
+    padding: 15px;
+    font-size: 25px;
+    cursor: pointer;
+    border-radius: 40px;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+.home-mobile{
+    display: none;
+}
+
+@media (max-width: 940px) {
 
     .header{
         display: none;
     }
 
     .home-mobile {
-        width: 100%;
         display: flex;
-        flex-direction: column;
-        align-items: center;
+    }
+
+    .header-content {
+        display: flex;
+        margin-bottom: 35px;
+        position: relative;
+        left: -40%;
+    }
+    
+    .arrow-icon.md-24 {
+        font-size: 36px;
+        cursor: pointer;
+        color: green;
     }
 
     .menu {
@@ -207,16 +219,6 @@ tbody tr {
         top: 0;
         background: url("../imagens/img-home.jpg");
     }
-
-    .menu .logo {
-        height: 40px;
-    }
-    
-    .right-section .search-icon {
-        font-size: 24px;
-        color: #fff;
-        cursor: pointer;
-    }
     
     .left-section, .right-section {
         display: flex;
@@ -231,20 +233,6 @@ tbody tr {
         font-size: 50px;
         color: green;
         cursor: pointer;
-    }
-    
-    .img-header-mobile {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        overflow: hidden;
-    }
-    
-    .img-header-mobile img {
-        width: 100%;
-        height: auto;
-        object-fit: cover;
     }
 
     .mobile-menu {
@@ -290,5 +278,29 @@ tbody tr {
     
     .menu {
         z-index: 3;
+    }
+
+    .right-card {
+        border: none;
+    }
+
+    .welcome-section {
+        flex-direction: column;
+    }
+
+    .left-image {
+        order: 2;
+        margin-top: -50px;
+        width: 500px;
+        display: block;
+    }
+
+    .responsive-img {
+        width: 100%;
+        transform: translateX(0);
+    }
+
+    .right-card {
+        order: 1;
     }
 }
