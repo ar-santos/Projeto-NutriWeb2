@@ -116,6 +116,29 @@ body {
     margin-top: 90px;
 }
 
+.header-content {
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    margin-bottom: 20px;
+}
+
+.arrow-icon {
+    font-size: 36px;
+    color: green;
+}
+
+.arrow-icon.md-24 {
+    font-size: 36px;
+    cursor: pointer;
+}
+
+.header-text {
+    font-size: 36px;
+    margin-left: 10px;
+    color: #333;
+}
+
 .ranking-section h1 {
     font-size: 2em;
     margin-bottom: 20px;
