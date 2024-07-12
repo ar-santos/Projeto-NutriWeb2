@@ -211,7 +211,7 @@ body {
     align-items: center;
     padding: 10px;
     width: 100%;
-    background-color: #f7f7f7;
+    background-color: transparent;
 }
 
 .card-header img {
@@ -319,10 +319,16 @@ body {
     position: absolute;
     top: 10px;
     right: 10px;
-    font-size: 24px;
     cursor: pointer;
+    color: green;
+}
+.close-modal.md-24{
+    font-size: 35px;
 }
 
+.modal-image-mobile{
+    display: none;
+}
 
 @media (max-width: 768px) {
     .header {
@@ -460,7 +466,6 @@ body {
         border-radius: 15px;
         font-size: 18px;
         cursor: pointer;
-        /* margin-top: 20px; */
         align-self: flex-end;
         margin-right: 40px;
     }
@@ -563,6 +568,13 @@ body {
         margin-top: 20px;
     }
 
+    .card-header img {
+        border-radius: 50%;
+        width: 65px;
+        height: 65px;
+        margin-right: 10px;
+    }
+
     .modal-card {
         text-align: center;
         padding: 20px;
@@ -572,6 +584,10 @@ body {
     .modal-card .name,
     .modal-card .profession {
         margin-bottom: 10px;
+    }
+
+    .modal-card .name{
+        margin-right: 25px;
     }
 
     .modal-description {
@@ -590,4 +606,14 @@ body {
         display: none;
     }
     
+    .modal-image-mobile{
+        display: flex;
+        flex: 1;
+        padding-right: 20px;
+    }
+
+    .modal-image-mobile img{
+        width: 100%;
+        border-radius: 10px;
+    }
 }
