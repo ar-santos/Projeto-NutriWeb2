@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="imagens/logo.png" type="image/x-icon">
-    <link rel="stylesheet" href="style/styleProfissionais.css">
+    <link rel="stylesheet" href="style/styleRanking.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
-    <title>Profissionais - nutriWeb</title>
+    <title>Ranking - nutriWeb</title>
 </head>
 
     <body>
-        
+
         <header class="header">
             
             <div class="left-section">
@@ -22,7 +22,7 @@
                         <button class="ranking-button">Ranking</button>
                     </div>
                 </a>
-        
+
                 <a href="indexProfissionais.html"><button class="profissionais-button">Profissionais</button></a>
             </div>
 
@@ -39,63 +39,35 @@
             </div>
             
         </header>
-
-        <div class="content">
-
-            <div class="header-content">
-                <a href="indexHome.html"><span class="material-icons arrow-icon md-24">arrow_back_ios</span></a>
-                <span class="header-text">Profissionais</span>
-            </div>
-
-            <div class="cards-container">
-
-                <div class="card">
-                    <img src="imagens/user-card.png" alt="Profissional 1" class="card-image">
-                    <div class="card-info">
-                        <h3 class="card-name">Nome:</h3>
-                        <p class="card-specialty">Especialidade:</p>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img src="imagens/user-card.png" alt="Profissional 2" class="card-image">
-                    <div class="card-info">
-                        <h3 class="card-name">Nome:</h3>
-                        <p class="card-specialty">Especialidade:</p>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img src="imagens/user-card.png" alt="Profissional 3" class="card-image">
-                    <div class="card-info">
-                        <h3 class="card-name">Nome:</h3>
-                        <p class="card-specialty">Especialidade:</p>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img src="imagens/user-card.png" alt="Profissional 4" class="card-image">
-                    <div class="card-info">
-                        <h3 class="card-name">Nome:</h3>
-                        <p class="card-specialty">Especialidade:</p>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img src="imagens/user-card.png" alt="Profissional 5" class="card-image">
-                    <div class="card-info">
-                        <h3 class="card-name">Nome:</h3>
-                        <p class="card-specialty">Especialidade:</p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
+        
+        <main>
+            <section class="ranking-section">
+                <h1>Ranking</h1>
+                <img src="imagens/img-ranking.png" alt="Exemplo Imagem" class="responsive-img">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Especialidade</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Bia</td>
+                            <td>Nutricionista</td>
+                        </tr>
+                        <tr>
+                            <td>André</td>
+                            <td>Personal</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
 
         <section class="home-mobile">
 
             <div class="menu">
-
                 <div class="left-section">
                     <a href="indexHome.html"><img src="imagens/logo.png" alt="Logo" class="logo"></a>
                 </div>
@@ -103,9 +75,8 @@
                 <div class="right-section">
                     <span class="material-icons search-icon md-24 menu-icon">menu</span>
                 </div>
-
             </div>
-
+            
             <div class="mobile-menu hidden">
                 <ul>
                     <li><a href="#">Entrar</a></li>
@@ -115,7 +86,7 @@
                 </ul>
             </div>
 
-        </section>
+        </section>    
 
     </body>
     <script src="script/indexMenu.js"></script>

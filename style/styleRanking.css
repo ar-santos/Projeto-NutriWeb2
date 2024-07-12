@@ -38,6 +38,7 @@ body {
 .btn-ranking {
     margin: 0 40px;
     align-items: center;
+    cursor: pointer;
 }
 
 .btn-ranking .icon-rank {
@@ -109,113 +110,69 @@ body {
     margin-top: 25px;
 }
 
-.content {
-    margin-top: 100px; 
+.ranking-section {
     padding: 20px;
     text-align: center;
+    margin-top: 90px;
 }
 
-.header-content {
-    display: flex;
-    align-items: left;
-    justify-content: left;
+.ranking-section h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: rgb(1, 103, 1);
+}
+
+.responsive-img {
+    max-width: 100%;
+    height: auto;
     margin-bottom: 20px;
 }
 
-.arrow-icon {
-    font-size: 36px;
-    color: green;
-}
-
-.arrow-icon.md-24 {
-    font-size: 36px;
-    cursor: pointer;
-}
-
-.header-text {
-    font-size: 36px;
-    margin-left: 10px;
-    color: #333;
-}
-
-.cards-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
-
-.card {
-    background-color: rgba(0, 128, 0, 0.738);
-    border: 2px solid rgb(1, 86, 1);
-    border-radius: 10px;
-    width: 200px;
-    text-align: left;
-    padding: 20px;
-    box-sizing: border-box;
-}
-
-.card-image {
+table {
     width: 100%;
-    height: auto;
-    border-radius: 50%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
 }
 
-.card-info {
-    margin-top: 10px;
+table, th, td {
+    border: 1px solid #ddd;
 }
 
-.card-name {
-    font-size: 20px;
-    color: #fff;
-    margin: 10px 0 5px;
+tr {
+    background-color: green;
+    color: white; 
 }
 
-.card-specialty {
-    font-size: 16px;
-    color: #fff;
+th, td {
+    padding: 15px;
+    text-align: left;
+}
+
+tbody tr {
+    background-color: #fff;
+    color: black;
 }
 
 .home-mobile {
     display: none;
 }
 
-@media (max-width: 768px) {
-
-    .header {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .left-section, .right-section {
-        margin: 10px 0;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .center-section {
-        margin-top: 10px;
-        justify-content: center;
-    }
-
-    .cards-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .card {
-        width: 80%;
-    }
-    
-}
-
-@media (max-width: 940px) {
+@media (max-width: 950px) {
 
     .header{
         display: none;
     }
+    .img-header{
+        display: none;
+    }
     .home-mobile {
         display: flex;
+    }
+    .cards-container{
+        display: none;
+    }
+    .filter-button{
+        display: none;
     }
 
     .home-mobile {
@@ -224,7 +181,7 @@ body {
         flex-direction: column;
         align-items: center;
     }
-    
+
     .menu {
         z-index: 1;
         display: flex;
@@ -238,6 +195,16 @@ body {
         position: fixed; 
         top: 0;
         background: url("../imagens/img-home.jpg");
+    }
+
+    .menu .logo {
+        height: 40px;
+    }
+    
+    .right-section .search-icon {
+        font-size: 24px;
+        color: #fff;
+        cursor: pointer;
     }
     
     .left-section, .right-section {
@@ -254,36 +221,19 @@ body {
         color: green;
         cursor: pointer;
     }
-
-    .arrow-icon.md-24 {
-        font-size: 30px;
-        cursor: pointer;
-    }
-
-    .header-text {
-        font-size: 30px;
-        margin-left: 2px;
-    }
-
-    .card {
-        background-color: #fff;
-        border: 4px solid green;
-        border-radius: 40px;
-        width: 200px;
-        text-align: left;
-        padding: 20px;
-        box-sizing: border-box;
-    }
-
-    .card-name {
-        font-size: 20px;
-        color: black;
-        margin: 10px 0 5px;
+    
+    .img-header-mobile {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
     }
     
-    .card-specialty {
-        font-size: 16px;
-        color: black;
+    .img-header-mobile img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
     }
 
     .mobile-menu {
@@ -293,7 +243,7 @@ body {
         background-image: url("../imagens/img-home.jpg");
         position: fixed;
         border-radius: 20px;
-        top: 14%;
+        top: 12%;
         left: 50%;
         width: 40%;
         height: 30%;

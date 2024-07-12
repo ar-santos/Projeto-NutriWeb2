@@ -38,11 +38,16 @@ body {
 .btn-ranking {
     margin: 0 40px;
     align-items: center;
+    cursor: pointer;
 }
 
 .btn-ranking .icon-rank {
     height: 40px;
     margin-right: 5px;
+}
+
+.ranking{
+    text-decoration: none;
 }
 
 .btn-ranking .ranking-button,
