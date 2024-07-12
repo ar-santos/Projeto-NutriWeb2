@@ -4,12 +4,7 @@ body {
     padding: 0;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
     background-image: url("../imagens/img-home.jpg");
-    background-size: cover;
-    background-position: center;
 }
 
 .header-content {
@@ -17,134 +12,132 @@ body {
     display: flex;
     justify-content: flex-start;
     padding: 20px;
-    position: absolute;
-    top: 0;
-    left: 0;
 }
 
 .back-button {
     display: flex;
     align-items: center;
     text-decoration: none;
-    color: #fff;
+    color: green;
     font-size: 25px;
+}
+
+.back-arrow{
+    color: #fff;
 }
 
 .arrow-icon.md-24 {
     font-size: 36px;
     cursor: pointer;
-    color: green;
     margin-right: 8px;
 }
 
-.main-content {
+.container {
     display: flex;
-    align-items: center;
     justify-content: center;
-    padding: 20px;
-    text-align: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 10px; 
+    margin-left: 80px; 
 }
 
-.left-image {
-    margin-right: 200px;
-}
-
-.responsive-img {
-    width: 100%;
-    max-width: 200px;
-    height: auto;
-}
-
-.right-card {
-    background-color: #f4f4f4;
-    border: 2px solid green;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    padding: 20px;
+.card {
+    flex: 1;
     max-width: 400px;
-    width: 100%;
-    min-height: 450px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
+    margin: 50px;
+    margin-right: 20px; 
 }
 
-.right-card h2 {
-    margin-bottom: 70px;
-    font-size: 40px;
-    color: green;
+.cadastro-form h2 {
+    padding: 10px;
+    font-size: 25px;
+    color: gray;
+    margin-bottom: 20px;
+    text-align: left;
 }
 
-.right-card p {
-    margin-bottom: 30px;
-    font-size: 20px;
+.campo-form {
+    margin-bottom: 15px;
+    text-align: left;
 }
 
-.buttons {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    width: 100%;
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
 }
 
-.btn {
-    background-color: white;
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: calc(100% - 24px);
+    padding: 12px;
+    margin-bottom: 15px;
+    border: none;
+    border-bottom: 1px solid black;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.2s ease-in-out;
+    box-sizing: border-box;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: #28a745;
+}
+
+.btn-cadastrar {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
+    background-color: #fff;
     color: black;
+    width: 100%;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    border-radius: 40px;
     border: 2px solid green;
-    padding: 15px;
     font-size: 18px;
     cursor: pointer;
-    width: 100%;
-    border-radius: 40px;
+    transition: background-color 0.3s ease-in-out;
 }
 
-.btn:hover {
-    opacity: 0.8;
+.btn-cadastrar:hover {
+    background-color: #1e7e34;
 }
 
-@media (max-width: 768px) {
-    .main-content {
-        flex-direction: column;
-    }
-
-    .left-image {
-        margin-right: 0;
-        margin-bottom: 20px;
-    }
+.imagem-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.mobile {
+.imagem-fullwidth {
+    max-width: 60%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.mobile{
     display: none;
 }
 
 @media (max-width: 940px) {
-
+    .mobile{
+        display: flex;
+    }
     .header-content{
         display: none;
     }
-    .left-image{
-        display: none;
-    }
-    .mobile {
-        display: flex;
-    }
-    .back-button{
-        display: none;
-    }
-
-    .header-content {
-        width: 100%;
-        display: flex;
-        justify-content: flex-start;
-        padding: 20px;
-        position: fixed;
-        top: 0;
-        left: 0;
-    }
-
-    .left-image {
+    .imagem-container{
         display: none;
     }
 
@@ -158,6 +151,18 @@ body {
         position: fixed;
         top: 0;
         z-index: 1;
+    }
+
+    .container {
+        margin-top: 0; 
+        margin-left: 0; 
+    }
+    
+    .card {
+        max-width: calc(100% - 40px); 
+        margin-right: 0; 
+        margin-left: 0;
+        margin-bottom: 0;
     }
 
     .menu {
@@ -226,23 +231,5 @@ body {
         font-size: 50px;
         color: green;
         cursor: pointer;
-    }
-
-    .right-card {
-        background-color: transparent;
-        color: #fff;
-        border: none;
-        box-shadow: none;
-        margin-top:70px;
-    }
-
-    .right-card h2 {
-        color: #fff;        
-    }
-
-    .btn{
-        background-color: transparent;
-        color: #fff;
-        border: 4px solid green;
     }
 }
