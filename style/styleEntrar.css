@@ -182,6 +182,7 @@ body {
     border: none;
     padding: 15px;
     font-size: 25px;
+    width: 100%;
     cursor: pointer;
     border-radius: 40px;
 }
