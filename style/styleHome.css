@@ -266,6 +266,64 @@ body {
     right: 0px;
 } */
 
+.modal {
+    position: fixed;
+    display: none; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+}
+
+.modal-content {
+    background: white;
+    width: 80%;
+    max-width: 900px;
+    display: flex;
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.modal-image {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.modal-image img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.modal-card {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-description h2,
+.modal-description h3 {
+    color: green;
+    margin-top: 20px;
+}
+
+.modal-description p {
+    margin-top: 10px;
+}
+
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+
 @media (max-width: 768px) {
     .header {
         flex-direction: column;
@@ -295,7 +353,7 @@ body {
     } */
 }
 
-@media (max-width: 940px) {
+@media (max-width: 1070px) {
 
     .header{
         display: none;
@@ -486,4 +544,50 @@ body {
     .menu {
         z-index: 3;
     }
+
+    .modal-content {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 100px;
+        height: auto; 
+        max-height: 70%;
+        padding: 20px;
+        overflow-y: auto;
+    }
+
+    .modal-image {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+        margin-top: 20px;
+    }
+
+    .modal-card {
+        text-align: center;
+        padding: 20px;
+        flex-grow: 1;
+    }
+
+    .modal-card .name,
+    .modal-card .profession {
+        margin-bottom: 10px;
+    }
+
+    .modal-description {
+        margin-top: 20px;
+    }
+
+    .close-modal {
+        font-size: 24px;
+        cursor: pointer;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+
+    .modal-image {
+        display: none;
+    }
+    
 }
