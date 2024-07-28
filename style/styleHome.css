@@ -209,9 +209,21 @@ body {
 .card-header {
     display: flex;
     align-items: center;
+    position: relative;
+    right: 30%;
     padding: 10px;
     width: 100%;
     background-color: transparent;
+}
+
+.card-perfil{
+    text-decoration: none;
+    outline: none;
+}
+
+.card-modal{
+    position: relative;
+    left: 30%;
 }
 
 .card-header img {
@@ -224,6 +236,7 @@ body {
 .card-header .name {
     font-size: 18px;
     font-weight: bold;
+    color: black;
 }
 
 .card-header .profession {
