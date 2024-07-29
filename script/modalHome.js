@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const cards = document.querySelectorAll('.card');
+    const cards = document.querySelectorAll('.content-img');
     const modal = document.getElementById('modal');
     const closeButton = document.getElementById('close-modal');
 
