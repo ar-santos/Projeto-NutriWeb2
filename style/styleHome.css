@@ -581,10 +581,14 @@ body {
         margin-top: 20px;
     }
 
+    .card-header {
+        right: 35%;
+    }
+
     .card-header img {
         border-radius: 50%;
-        width: 65px;
-        height: 65px;
+        width: 60px;
+        height: 60px;
         margin-right: 10px;
     }
 
